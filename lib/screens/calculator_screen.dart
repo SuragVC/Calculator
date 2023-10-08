@@ -11,8 +11,13 @@ class CalculatorScreen extends StatefulWidget {
 }
 
 class _CalculatorScreenState extends State<CalculatorScreen> {
+  final decoration = const BoxDecoration(
+      borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
+      color: AppConstantColors.secondaryBlack);
+  final padding = const EdgeInsets.symmetric(horizontal: 25, vertical: 30);
   @override
   Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.sizeOf(context).height;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppConstantColors.primaryBlack,
@@ -23,9 +28,17 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
       backgroundColor: AppConstantColors.primaryBlack,
       body: Container(
         padding: const EdgeInsets.all(20),
-        child: const Column(children: [
-          CustomTextField(),
-        ]),
+        child: Column(
+          children: [
+            const CustomTextField(),
+            const Spacer(),
+            Container(
+              decoration: decoration,
+              padding: padding,
+              height: screenHeight * 0.6,
+            )
+          ],
+        ),
       ),
     );
   }

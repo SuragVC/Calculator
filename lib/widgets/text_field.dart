@@ -6,11 +6,11 @@ class CustomTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 2),
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 2),
       child: TextField(
-        style: const TextStyle(
-          fontSize: 25,
+        style: TextStyle(
+          fontSize: 50,
           color: AppConstantColors.primaryBlue,
         ),
         cursorColor: Colors.white,
@@ -19,14 +19,13 @@ class CustomTextField extends StatelessWidget {
         showCursor: true,
         readOnly: true,
         decoration: InputDecoration(
-          // enabled: false,
-          focusedBorder: const OutlineInputBorder(
+          focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(
               color: Colors.transparent,
               width: 0,
             ),
           ),
-          fillColor: Colors.grey[900],
+          fillColor: AppConstantColors.secondaryBlack,
           filled: true,
         ),
       ),
