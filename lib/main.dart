@@ -1,4 +1,4 @@
-import 'package:calculator/constants/colours.dart';
+import 'package:calculator/constants/colors.dart';
 import 'package:calculator/screens/calculator_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -12,14 +12,9 @@ class HomeScreen extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      darkTheme: ThemeData.dark(),
-      themeMode: ThemeMode.dark,
-      theme: ThemeData(
-        useMaterial3: true,
-      ),
+    return const MaterialApp(
       color: AppConstantColors.primaryBlack,
-      home: const CalculatorScreen(),
+      home: CalculatorScreen(),
     );
   }
 }
